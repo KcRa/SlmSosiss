@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:background="@color/color_primary_v2"
+        style="@style/app_bar">
+
+        <ImageView
+            android:id="@+id/back_to_menupage"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            style="@style/bak_icon" />
+        <TextView
+            android:text="ورود به برنامه"
+            style="@style/app_bar_title" />
+        <ImageView
+            android:id="@+id/more_vert"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            style="@style/more_vert_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:background="@drawable/sosiss_on_ent_page_alt02"
+        >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_marginTop="360dp"
+            android:hint="نام کاربری"
+            style="@style/edit_text_sosiss_shape" />
+        <EditText
+            android:id="@+id/password"
+            android:layout_below="@+id/username"
+            android:layout_marginTop="8dp"
+            android:hint="شناسه کاربری"
+            style="@style/edit_text_sosiss_shape" />
+        <TextView
+            android:id="@+id/go_to_tamr_entry_page"
+            android:layout_width="240dp"
+            android:layout_height="32dp"
+            android:layout_below="@+id/password"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_sosiss_button_on_first_page"
+            android:text="از این‌جـــا وارد شوید"
+            android:textSize="12dp"
+            android:textColor="@color/color_on_black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

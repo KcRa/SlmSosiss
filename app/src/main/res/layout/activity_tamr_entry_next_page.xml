@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:background="@color/color_primary"
+        style="@style/app_bar">
+
+        <ImageView
+            android:id="@+id/back_to_tamrentrypage"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            style="@style/bak_icon" />
+        <TextView
+            android:text="این‌جـــــــا"
+            style="@style/app_bar_title" />
+        <ImageView
+            android:id="@+id/more_vert"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            style="@style/more_vert_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        android:background="@color/color_primary_v2"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sosiss_on_ent_page_alt02"
+            app:civ_border_width="4dp"
+            app:civ_border_color="@color/color_on_black"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

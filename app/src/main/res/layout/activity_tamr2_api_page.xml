@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:background="@color/color_primary_v2"
+        style="@style/app_bar">
+
+        <ImageView
+            android:id="@+id/back_to_menupage"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            style="@style/bak_icon" />
+        <TextView
+            android:text="اِی.پی.آی"
+            style="@style/app_bar_title" />
+        <ImageView
+            android:id="@+id/more_vert"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            style="@style/more_vert_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar"
+        android:background="@color/color_surface"
+        >
+
+        <ImageView
+            android:id="@+id/product_pic"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:id="@+id/TxVu_store_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_pic"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="24dp"
+            android:text="نام فروشگاه"
+            android:textSize="18dp"
+            android:textColor="@color/color_on_white"
+            android:fontFamily="@font/markazitext_regular"
+
+            />
+        <TextView
+            android:id="@+id/TxVu_product_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxVu_store_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="نام محصول"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/color_on_white"
+            android:fontFamily="@font/markazitext_regular"
+            />
+
+
+        <TextView
+            android:id="@+id/tooman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/TxVu_product_price"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="تومان"
+            android:textSize="18dp"
+            android:textColor="@color/color_on_white"
+            android:fontFamily="@font/markazitext_regular"
+            />
+        <TextView
+            android:id="@+id/TxVu_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/TxVu_product_name"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/tooman"
+            android:text="000000"
+            android:textSize="24dp"
+            android:textColor="@color/color_on_white"
+            android:fontFamily="@font/b_mitra"
+            android:textStyle="bold"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_below="@id/TxVu_product_name"
+            android:layout_marginTop="16dp"
+            >
+            <TextView
+                android:id="@+id/TxVu_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:text="توضیحات محصول"
+                android:textSize="18dp"
+                android:textColor="@color/color_on_white"
+                android:fontFamily="@font/markazitext_regular"
+                />
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/add_to_card"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_sosiss_button_on_first_page"
+            >
+            <RelativeLayout
+                android:layout_width="104dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+                <TextView
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="افزودن به سبد"
+                    android:textSize="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/color_on_black"
+                    android:fontFamily="@font/markazitext_regular"
+                    android:textStyle="bold"
+                    />
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_add_shopping_cart_white_24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

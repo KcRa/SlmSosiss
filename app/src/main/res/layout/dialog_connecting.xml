@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="120dp"
+    android:id="@+id/dlog_processing"
+    android:layout_gravity="center"
+    android:background="@color/color_dialog"
+    android:elevation="8dp"
+    >
+    <ProgressBar
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="اتصال به اینترنت"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/color_on_white"
+        />
+
+
+</FrameLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:background="@color/color_primary"
+        style="@style/app_bar">
+
+        <ImageView
+            android:id="@+id/back_to_firstpage"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            style="@style/bak_icon" />
+        <TextView
+            android:text="خـــــانه"
+            style="@style/app_bar_title" />
+        <ImageView
+            android:id="@+id/more_vert"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            style="@style/more_vert_icon" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_margin="12dp"
+        android:columnCount="2"
+        >
+
+        <FrameLayout
+            android:id="@+id/tamr_entry"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_exit_to_app_black_48dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="نام‌نویسی/ورود"
+                style="@style/text_view_frame_view_menu_page" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tamr_recycle_view_card_view"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_view_list_black_48dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="لیست‌ویو/کارد‌ویو"
+                style="@style/text_view_frame_view_menu_page" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tamr_drawer"
+            android:background="@drawable/shape_frame_layout"
+        style="@style/frame_layout_in_menu_page">
+        <ImageView
+            android:src="@drawable/ic_menu_black_48dp"
+            style="@style/image_view_frame_view_menu_page" />
+        <TextView
+            android:text="دراور"
+            style="@style/text_view_frame_view_menu_page" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tamr_visible_invisible"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_visibility_black_24dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="ویزیبل/اینویزیبل"
+                style="@style/text_view_frame_view_menu_page"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tamr_api_1"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_api_48dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="API 1"
+                style="@style/text_view_frame_view_menu_page"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tamr_api_2"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_api_48dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="API 2"
+                style="@style/text_view_frame_view_menu_page"
+                />
+        </FrameLayout>
+
+
+
+    </GridLayout>
+
+</RelativeLayout>

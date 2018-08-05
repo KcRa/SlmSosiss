@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="136dp"
+    android:id="@+id/dlog_processing"
+    android:layout_gravity="center"
+    android:background="@color/color_error"
+    android:elevation="8dp"
+    >
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_error_black_36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="خطا ! اینترنت وصل نیست."
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="64dp"
+        android:textColor="@color/color_on_black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/try_again"
+        android:text="تلاش دوباره"
+        android:layout_marginHorizontal="72dp"
+        android:layout_marginTop="96dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/color_on_black"
+        />
+
+    <TextView
+        android:id="@+id/close_it"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+
+        android:layout_marginTop="96dp"
+        android:gravity="center"
+        android:text="بستن"
+        android:textColor="@color/color_on_black"
+        android:textSize="16dp"
+        android:textStyle="bold"
+
+        />
+
+</FrameLayout>

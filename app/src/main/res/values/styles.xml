@@ -1,0 +1,84 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="frame_layout_in_menu_page">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">96dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="image_view_frame_view_menu_page">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="text_view_frame_view_menu_page">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">12dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">@color/color_on_white</item>
+    </style>
+
+    <style name="app_bar_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_on_black</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">56dp</item>
+        <item name="android:fontFamily">@font/baloobhaijaan_regular</item>
+    </style>
+
+    <style name="bak_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="more_vert_icon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+
+    <style name="app_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="edit_text_sosiss_shape">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:background">@drawable/shape_sosiss_button_on_entry_page</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:textColor">@color/color_on_white</item>
+    </style>
+
+</resources>
