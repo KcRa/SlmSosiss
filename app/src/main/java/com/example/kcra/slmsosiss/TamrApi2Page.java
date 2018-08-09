@@ -11,8 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,8 +29,13 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class TamrApi2Page extends AppCompatActivity {
-
-
+    
+    SliderLayout prdctPict;
+    TextView storeName;
+    TextView prdctName;
+    TextView prdctPrice;
+    TextView prdcrDescription;
+    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +52,11 @@ public class TamrApi2Page extends AppCompatActivity {
         Refresh r = new Refresh();
         r.execute();
 
+        prdctPict = findViewById(R.id.product_pic);
+        storeName = findViewById(R.id.TxVu_store_name);
+        prdctName = findViewById(R.id.TxVu_product_name);
+        prdctPrice = findViewById(R.id.TxVu_product_price);
+        prdcrDescription = findViewById(R.id.TxVu_product_description);
     }
 
     class Refresh extends AsyncTask {
@@ -55,12 +68,6 @@ public class TamrApi2Page extends AppCompatActivity {
         Dialog dLogCnctng;
         Dialog dLogErr;
 
-        ImageView prdctPict = findViewById(R.id.product_pic);
-        TextView storeName = findViewById(R.id.TxVu_store_name);
-        TextView prdctName = findViewById(R.id.TxVu_product_name);
-        TextView prdctPrice = findViewById(R.id.TxVu_product_price);
-        TextView prdcrDescription = findViewById(R.id.TxVu_product_description);
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -70,19 +77,16 @@ public class TamrApi2Page extends AppCompatActivity {
             dLogCnctng.setContentView(R.layout.dialog_connecting);
             dLogCnctng.show();
 
-
-
             clnt = new OkHttpClient.Builder()
                     .connectTimeout(30, TimeUnit.SECONDS)
                     .readTimeout(30,TimeUnit.SECONDS)
                     .writeTimeout(30,TimeUnit.SECONDS)
                     .build();
 
-            RequestBody bud = RequestBody.create(MediaType.parse("application/json;charset=utf-8"),jsonObject);
+            //RequestBody bud = RequestBody.create(MediaType.parse("application/json;charset=utf-8"),jsonObject);  : متدهای پّست
             rqst = new Request.Builder()
-                    .url("http://www.shopiona.ir/api/v1/product/detail/10034")
-                    .addHeader()
-                    .post(bud)
+                    .url("http://www.shopiona.ir/api/v1/product/detail/10027")
+                    .get()
                     .build();
         }
 
@@ -106,8 +110,16 @@ public class TamrApi2Page extends AppCompatActivity {
                     try {
 
                         JSONObject jsonObject = new JSONObject(String.valueOf(o));
-                        String pic = jsonObject.getString("primaryImage");
-                        Picasso.get().load(pic).into(prdctPict);
+                        //String pic = jsonObject.getString("primaryImage"); جور اول برای مقداردهی پیکاسو
+                        //Picasso.get().load(pic).into(prdctPict);
+                        //Picasso.get().load(jsonObject.getString("primaryImage")).into(prdctPict);
+                        JSONArray jsonArray = jsonObject.getJSONArray("imageList");
+                        for (int i=0;i<jsonArray.length();i++) {
+                            DefaultSliderView dfltSlydrVu = new DefaultSliderView(TamrApi2Page.this);
+                            dfltSlydrVu.image(jsonArray.getString(i));
+                            prdctPict.addSlider(dfltSlydrVu);
+                        }
+
                         storeName.setText(jsonObject.getString("storeName"));
                         prdctName.setText(jsonObject.getString("name"));
                         prdctPrice.setText(jsonObject.getString("price"));

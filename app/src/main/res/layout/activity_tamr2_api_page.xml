@@ -30,7 +30,7 @@
         android:background="@color/color_surface"
         >
 
-        <ImageView
+        <com.daimajia.slider.library.SliderLayout
             android:id="@+id/product_pic"
             android:layout_width="match_parent"
             android:layout_height="240dp"

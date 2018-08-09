@@ -15,6 +15,7 @@ class FirstPage : AppCompatActivity() {
         goToMenuPage.setOnClickListener(View.OnClickListener {
             var intent = Intent(this@FirstPage,MenuPage::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.enter,R.anim.exit)
         })
     }
 }

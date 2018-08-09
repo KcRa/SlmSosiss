@@ -138,8 +138,8 @@ public class TamrApiPage extends AppCompatActivity {
                         JSONArray jsonArray = jsonObject.getJSONArray("items");
                         for (int i = 0; i < jsonArray.length() ; i++) {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-                            String namesFronJSON = jsonObject1.getString("name");
-                            toLstVu.add(namesFronJSON);
+                            String namesFromJSON = jsonObject1.getString("name");
+                            toLstVu.add(namesFromJSON);
                             aDptr.notifyDataSetChanged();
                         }
                     } catch (JSONException e) {

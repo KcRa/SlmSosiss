@@ -15,6 +15,7 @@ class MenuPage : AppCompatActivity() {
         var bakToFirstPage = findViewById<ImageView>(R.id.back_to_firstpage)
         bakToFirstPage.setOnClickListener(View.OnClickListener {
             finish()
+            overridePendingTransition(R.anim.exit_bak,R.anim.enter_bak)
         })
 
         var goToTamrEntryPage = findViewById<FrameLayout>(R.id.tamr_entry)

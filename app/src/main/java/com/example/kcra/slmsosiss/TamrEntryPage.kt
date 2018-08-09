@@ -22,6 +22,7 @@ class TamrEntryPage : AppCompatActivity() {
         var bakToMenuPage = findViewById<ImageView>(R.id.back_to_menupage)
         bakToMenuPage.setOnClickListener(View.OnClickListener {
             finish()
+
         })
 
         var userName = findViewById<EditText>(R.id.username)
@@ -31,7 +32,7 @@ class TamrEntryPage : AppCompatActivity() {
 
         var runble = Runnable { kotlin.run {
 
-            if ((userName.text.toString()=="user")&&(passWord.text.toString()=="1234")) {
+            if ((userName.text.toString()=="p")&&(passWord.text.toString()=="p")) {
                 var intent = Intent(this@TamrEntryPage,TamrEntryNextPage::class.java)
                 dLogProcess!!.dismiss()
                 startActivity(intent)
@@ -62,7 +63,7 @@ class TamrEntryPage : AppCompatActivity() {
                 dLogProcess!!.dismiss()
                 hndlr.removeCallbacks(runble)
             })
-            hndlr.postDelayed(runble,3000)
+            hndlr.postDelayed(runble,1000)
             dLogProcess!!.show()
 
         })
