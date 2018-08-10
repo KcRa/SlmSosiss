@@ -119,7 +119,6 @@ public class TamrApi2Page extends AppCompatActivity {
                             dfltSlydrVu.image(jsonArray.getString(i));
                             prdctPict.addSlider(dfltSlydrVu);
                         }
-
                         storeName.setText(jsonObject.getString("storeName"));
                         prdctName.setText(jsonObject.getString("name"));
                         prdctPrice.setText(jsonObject.getString("price"));

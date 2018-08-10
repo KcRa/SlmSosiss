@@ -20,15 +20,24 @@ class TamrEntryNextPage : AppCompatActivity() {
         })
 
         var sosissInCircle = findViewById<CircleImageView>(R.id.sosiss_in_circle)
-        var sosiss = AnimationUtils.loadAnimation(this,R.anim.rotate)
-        //var sosiss2 = AnimationUtils.loadAnimation(this,R.anim.scale)
+        val sosiss = AnimationUtils.loadAnimation(this,R.anim.rotate)
         sosiss.fillAfter=true
-        //sosiss2.fillAfter=true
-        //sosiss.repeatCount=2
-        //sosiss_in_circle.startAnimation(sosiss2)
-        sosiss_in_circle.startAnimation(sosiss)
-//        sosiss.setAnimationListener(Animation.AnimationListener {
+        sosissInCircle.startAnimation(sosiss)
+
+//      sosiss.setAnimationListener(object : Animation.AnimationListener { // لیسنر برای آغاز یا آخر یا چندباره دیده شدن انیمیشن
+//            override fun onAnimationRepeat(p0: Animation?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//
+//            override fun onAnimationEnd(p0: Animation?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
+//
+//            override fun onAnimationStart(p0: Animation?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+//            }
 //
 //        })
+
     }
 }
