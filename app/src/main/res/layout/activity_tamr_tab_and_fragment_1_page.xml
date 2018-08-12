@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:background="@color/color_primary"
+        style="@style/app_bar">
+
+        <ImageView
+            android:id="@+id/back_to_menupage"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            style="@style/bak_icon" />
+        <TextView
+            android:text="تب و فرگمنت ۱"
+            style="@style/app_bar_title" />
+        <ImageView
+            android:id="@+id/more_vert"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            style="@style/more_vert_icon" />
+    </RelativeLayout>
+
+
+    <TabHost
+        android:id="@+id/tab_host"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@id/app_bar"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <RelativeLayout
+                    android:id="@+id/primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Primary"
+                        android:textSize="56dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_on_black"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/secondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/color_secondary"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Secondary"
+                        android:textSize="56dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_on_black"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sosiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/sausage"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sosiss"
+                        android:textSize="56dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/color_on_black"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</RelativeLayout>

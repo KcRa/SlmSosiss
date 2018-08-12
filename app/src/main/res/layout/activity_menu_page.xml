@@ -5,22 +5,22 @@
     >
 
     <RelativeLayout
-        android:id="@+id/app_bar"
-        android:background="@color/color_primary"
-        style="@style/app_bar">
+    android:id="@+id/app_bar"
+    android:background="@color/color_primary"
+    style="@style/app_bar">
 
-        <ImageView
-            android:id="@+id/back_to_firstpage"
-            android:src="@drawable/ic_arrow_forward_white_24dp"
-            style="@style/bak_icon" />
-        <TextView
-            android:text="خـــــانه"
-            style="@style/app_bar_title" />
-        <ImageView
-            android:id="@+id/more_vert"
-            android:src="@drawable/ic_more_vert_white_24dp"
-            style="@style/more_vert_icon" />
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/back_to_firstpage"
+        android:src="@drawable/ic_arrow_forward_white_24dp"
+        style="@style/bak_icon" />
+    <TextView
+        android:text="خـــــانه"
+        style="@style/app_bar_title" />
+    <ImageView
+        android:id="@+id/more_vert"
+        android:src="@drawable/ic_more_vert_white_24dp"
+        style="@style/more_vert_icon" />
+</RelativeLayout>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -101,6 +101,30 @@
                 style="@style/image_view_frame_view_menu_page" />
             <TextView
                 android:text="API 2"
+                style="@style/text_view_frame_view_menu_page"
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/tamr_tab1"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_tab_black_24dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="تب و فرگمنت ۱"
+                style="@style/text_view_frame_view_menu_page"
+                />
+        </FrameLayout>
+        <FrameLayout
+            android:id="@+id/tamr_tab2"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_tab_black_24dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="تب و فرگمنت ۲"
                 style="@style/text_view_frame_view_menu_page"
                 />
         </FrameLayout>

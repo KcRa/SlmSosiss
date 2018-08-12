@@ -25,7 +25,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class TamrApiPage extends AppCompatActivity {
+public class TamrApi1Page extends AppCompatActivity {
 
     LayoutInflater lIF;
     apiToListAdapter aDptr;
@@ -34,7 +34,7 @@ public class TamrApiPage extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tamr_api_page);
+        setContentView(R.layout.activity_tamr_api1_page);
 
         lIF = LayoutInflater.from(this);
         ListView lVu = findViewById(R.id.list_vu_api);
@@ -143,15 +143,15 @@ public class TamrApiPage extends AppCompatActivity {
                             aDptr.notifyDataSetChanged();
                         }
                     } catch (JSONException e) {
-                        Toast.makeText(TamrApiPage.this,"خطای ۱",Toast.LENGTH_LONG).show();
+                        Toast.makeText(TamrApi1Page.this,"خطای ۱",Toast.LENGTH_LONG).show();
                     }
                 }
                 else {
-                    Toast.makeText(TamrApiPage.this,"خطای ۱",Toast.LENGTH_LONG).show();
+                    Toast.makeText(TamrApi1Page.this,"خطای ۱",Toast.LENGTH_LONG).show();
                 }
             }
             else {
-                Toast.makeText(TamrApiPage.this,"خطای ۲",Toast.LENGTH_LONG).show();
+                Toast.makeText(TamrApi1Page.this,"خطای ۲",Toast.LENGTH_LONG).show();
             }
         }
     }

@@ -23,8 +23,10 @@
         <activity android:name=".TamrEntryPage"></activity>
         <activity android:name=".TamrEntryNextPage"></activity>
         <activity android:name=".TamrListViewPage"></activity>
-        <activity android:name=".TamrApiPage"></activity>
+        <activity android:name=".TamrApi1Page"></activity>
         <activity android:name=".TamrApi2Page"></activity>
+        <activity android:name=".TamrTabAndFragment1Page"></activity>
+        <activity android:name=".TamrTabAndFragment2Page"></activity>
     </application>
 
 </manifest>

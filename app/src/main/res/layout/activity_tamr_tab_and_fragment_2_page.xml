@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/app_bar"
+        android:background="@color/color_primary"
+        style="@style/app_bar">
+
+        <ImageView
+            android:id="@+id/back_to_menupage"
+            android:src="@drawable/ic_arrow_forward_white_24dp"
+            style="@style/bak_icon" />
+        <TextView
+            android:text="تب و فرگمنت ۲"
+            style="@style/app_bar_title" />
+        <ImageView
+            android:id="@+id/more_vert"
+            android:src="@drawable/ic_more_vert_white_24dp"
+            style="@style/more_vert_icon" />
+    </RelativeLayout>
+
+
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/fragment_tab_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_bar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            </TabWidget>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                />
+
+            <FrameLayout
+                android:id="@+id/contentZZZ"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.app.FragmentTabHost>
+
+
+
+
+</RelativeLayout>

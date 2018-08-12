@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,10 +21,8 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class TamrApi2Page extends AppCompatActivity {
@@ -39,7 +36,7 @@ public class TamrApi2Page extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tamr2_api_page);
+        setContentView(R.layout.activity_tamr_api2_page);
 
         ImageView bakToMenu = findViewById(R.id.back_to_menupage);
         bakToMenu.setOnClickListener(new View.OnClickListener() {

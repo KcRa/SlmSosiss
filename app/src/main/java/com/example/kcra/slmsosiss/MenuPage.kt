@@ -32,13 +32,25 @@ class MenuPage : AppCompatActivity() {
 
         var goToTamr1APIPage = findViewById<FrameLayout>(R.id.tamr_api_1)
         goToTamr1APIPage.setOnClickListener(View.OnClickListener {
-            var intent = Intent (this@MenuPage,TamrApiPage::class.java)
+            var intent = Intent (this@MenuPage, TamrApi1Page::class.java)
             startActivity(intent)
         })
 
         var goToTamr2APIPage = findViewById<FrameLayout>(R.id.tamr_api_2)
         goToTamr2APIPage.setOnClickListener(View.OnClickListener {
             var intent = Intent (this@MenuPage,TamrApi2Page::class.java)
+            startActivity(intent)
+        })
+
+        var goToTamrTabZ1 = findViewById<FrameLayout>(R.id.tamr_tab1)
+        goToTamrTabZ1.setOnClickListener(View.OnClickListener {
+            var intent = Intent (this@MenuPage, TamrTabAndFragment1Page::class.java)
+            startActivity(intent)
+        })
+
+        var goToTamrTabZ2 = findViewById<FrameLayout>(R.id.tamr_tab2)
+        goToTamrTabZ2.setOnClickListener(View.OnClickListener {
+            var intent = Intent (this@MenuPage, TamrTabAndFragment2Page::class.java)
             startActivity(intent)
         })
 

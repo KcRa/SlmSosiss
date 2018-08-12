@@ -21,7 +21,7 @@ class TamrEntryNextPage : AppCompatActivity() {
 
         var sosissInCircle = findViewById<CircleImageView>(R.id.sosiss_in_circle)
         val sosiss = AnimationUtils.loadAnimation(this,R.anim.rotate)
-        sosiss.fillAfter=true
+        //sosiss.fillAfter=true
         sosissInCircle.startAnimation(sosiss)
 
 //      sosiss.setAnimationListener(object : Animation.AnimationListener { // لیسنر برای آغاز یا آخر یا چندباره دیده شدن انیمیشن
