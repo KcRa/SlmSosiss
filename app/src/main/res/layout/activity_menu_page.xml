@@ -128,6 +128,18 @@
                 style="@style/text_view_frame_view_menu_page"
                 />
         </FrameLayout>
+        <FrameLayout
+            android:id="@+id/tamr_map"
+            android:background="@drawable/shape_frame_layout"
+            style="@style/frame_layout_in_menu_page">
+            <ImageView
+                android:src="@drawable/ic_location_on_black_48dp"
+                style="@style/image_view_frame_view_menu_page" />
+            <TextView
+                android:text="نقشه گوگل"
+                style="@style/text_view_frame_view_menu_page"
+                />
+        </FrameLayout>
 
 
 

@@ -64,6 +64,7 @@ public class TamrListViewPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+                overridePendingTransition(R.anim.plus_100_bak_to_zero,R.anim.zero_bak_to_menus_100);
             }
         });
     }

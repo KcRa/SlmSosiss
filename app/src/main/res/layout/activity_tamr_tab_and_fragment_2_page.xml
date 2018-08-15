@@ -6,7 +6,7 @@
     >
     <RelativeLayout
         android:id="@+id/app_bar"
-        android:background="@color/color_primary"
+        android:background="@color/color_secondary"
         style="@style/app_bar">
 
         <ImageView

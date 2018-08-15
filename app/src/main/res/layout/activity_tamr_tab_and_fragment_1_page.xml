@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+
     <RelativeLayout
-        android:id="@+id/app_bar"
-        android:background="@color/color_primary"
-        style="@style/app_bar">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:id="@+id/app_bar"
+            android:background="@color/color_secondary"
+            style="@style/app_bar">
 
-        <ImageView
-            android:id="@+id/back_to_menupage"
-            android:src="@drawable/ic_arrow_forward_white_24dp"
-            style="@style/bak_icon" />
-        <TextView
-            android:text="تب و فرگمنت ۱"
-            style="@style/app_bar_title" />
-        <ImageView
-            android:id="@+id/more_vert"
-            android:src="@drawable/ic_more_vert_white_24dp"
-            style="@style/more_vert_icon" />
-    </RelativeLayout>
-
+            <ImageView
+                android:id="@+id/back_to_menupage"
+                android:src="@drawable/ic_arrow_forward_white_24dp"
+                style="@style/bak_icon" />
+            <TextView
+                android:text="تب و فرگمنت ۱"
+                style="@style/app_bar_title" />
+            <ImageView
+                android:id="@+id/more_vert"
+                android:src="@drawable/ic_more_vert_white_24dp"
+                style="@style/more_vert_icon" />
+        </RelativeLayout>
 
     <TabHost
         android:id="@+id/tab_host"
@@ -56,12 +56,14 @@
                     android:background="@color/colorPrimary"
                     >
                     <TextView
+                        android:id="@+id/map_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Primary"
                         android:textSize="56dp"
                         android:textStyle="bold"
                         android:textColor="@color/color_on_black"
+                        android:gravity="center"
                         android:layout_centerInParent="true"
                         />
                 </RelativeLayout>

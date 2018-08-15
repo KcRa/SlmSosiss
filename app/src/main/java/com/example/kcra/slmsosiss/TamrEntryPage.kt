@@ -22,7 +22,7 @@ class TamrEntryPage : AppCompatActivity() {
         var bakToMenuPage = findViewById<ImageView>(R.id.back_to_menupage)
         bakToMenuPage.setOnClickListener(View.OnClickListener {
             finish()
-
+            overridePendingTransition(R.anim.plus_100_bak_to_zero,R.anim.zero_bak_to_menus_100)
         })
 
         var userName = findViewById<EditText>(R.id.username)
@@ -36,6 +36,7 @@ class TamrEntryPage : AppCompatActivity() {
                 var intent = Intent(this@TamrEntryPage,TamrEntryNextPage::class.java)
                 dLogProcess!!.dismiss()
                 startActivity(intent)
+                overridePendingTransition(R.anim.menus_100_to_zero,R.anim.zero_to_plus_100)
             }
 
             else {
@@ -48,7 +49,6 @@ class TamrEntryPage : AppCompatActivity() {
                     dlogErr.dismiss()
                 })
                 dlogErr.show()
-
             }
         } }
 
@@ -67,17 +67,5 @@ class TamrEntryPage : AppCompatActivity() {
             dLogProcess!!.show()
 
         })
-
-
-
-
-
-
-
-
-
-
-
     }
-
 }
