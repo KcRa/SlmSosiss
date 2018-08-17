@@ -18,7 +18,7 @@ public class Tab01Page extends Fragment {
 //      return super.onCreateView(inflater, container, savedInstanceState); // این خط را احتیاج نداریم و می‌شود که کلا پاک کنیم
         View Vu01 = inflater.inflate(R.layout.form_fragment,container,false);
         TextView txt = Vu01.findViewById(R.id.TxtVu);
-        txt.setText("Prima!");
+        txt.setText("خبر از ما");
         txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

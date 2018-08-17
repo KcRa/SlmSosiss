@@ -13,10 +13,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="blablabla"
-            android:textSize="56dp"
+            android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@color/color_on_black"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/markazitext_regular"
             />
     </RelativeLayout>
 

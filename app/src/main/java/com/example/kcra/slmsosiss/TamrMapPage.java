@@ -40,7 +40,10 @@ public class TamrMapPage extends FragmentActivity implements OnMapReadyCallback{
         mMap = googleMap;
         LatLng isfahan = new LatLng(32.661343, 51.680374);
         mMap.addMarker(new MarkerOptions().position(isfahan).title("marker in isfahan"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(isfahan));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(isfahan,12));
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
 
 
     }

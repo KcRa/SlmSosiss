@@ -1,5 +1,7 @@
 package com.example.kcra.slmsosiss;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -16,7 +18,18 @@ public class Tab03Page extends Fragment {
 //        return super.onCreateView(inflater, container, savedInstanceState);
         View Vu03 = inflater.inflate(R.layout.form_fragment,container,false);
         TextView txt = Vu03.findViewById(R.id.TxtVu);
-        txt.setText("Tercera!");
+        txt.setText("در فلان‌جا شر کنید");
+        txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_SUBJECT,"شر کنید");
+                intent.putExtra(Intent.EXTRA_TEXT,"این را شر کنید");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(Intent.createChooser(intent,"اشتراک گذاری با ..."));
+            }
+        });
         Vu03.setBackgroundColor(getResources().getColor(R.color.sausage));
         return Vu03;
     }

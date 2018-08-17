@@ -1,6 +1,8 @@
 package com.example.kcra.slmsosiss;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,6 +11,9 @@ import android.widget.TabHost;
 import android.widget.Toast;
 
 public class TamrTabAndFragment1Page extends AppCompatActivity {
+
+     boolean isPlay = false;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,12 +28,16 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
             }
         });
 
-        TabHost tbHst = findViewById(R.id.tab_host); //از جنس تب‌هاست متغیر می‌سازیم و فایندبای‌آی‌دی می‌کنیم
+        final MediaPlayer mP = MediaPlayer.create(TamrTabAndFragment1Page.this,R.raw.a);
+        final ImageView play = findViewById(R.id.play_muzik);
+        final ImageView pause = findViewById(R.id.pause_muzik);
+
+        final TabHost tbHst = findViewById(R.id.tab_host); //از جنس تب‌هاست متغیر می‌سازیم و فایندبای‌آی‌دی می‌کنیم
         tbHst.setup();
 
         TabHost.TabSpec tab1 = tbHst.newTabSpec("One"); // از کلاس تب‌اسپک آبجکت می‌سازیم و تگ می‌دهیم
         tab1.setContent(R.id.primary); // برای آبکجت ست‌کانتنت می‌کنیم با آی‌دی یکی از سه‌ ریلتیو‌لی‌آوت موجود در فریم لی‌آوت
-        tab1.setIndicator("1'st"); // برای آبجکت ست ایندیکیتور می‌کنیم
+        tab1.setIndicator("1'st"); // برای آبجکت ست ایندیکیتور می‌کنیم (روی خود تب نوشته می‌شود)
         tbHst.addTab(tab1); // آبجکت اول را (از تب‌اسپک ساختیم) اضافه می‌کنیم به آبجکتی که از تب‌هاست ساخته بودیم
 
         TabHost.TabSpec tab2 = tbHst.newTabSpec("Two");
@@ -41,11 +50,34 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
         tab3.setIndicator("3'rd");
         tbHst.addTab(tab3);
 
-        tbHst.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+
+        TabHost.OnTabChangeListener tb = new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String s) { // برای آبکجتی که از تب‌هاست ساخته بودیم تب‌چنجد‌لیستنر ست می‌کنیم
                 switch (s) { //  با سویچ و به ازای تگ‌هایی که به هر تب نسبت دادیم می‌تونیم کد‌های نه خیلی مفصل بنویسیم
                     case "One" :
+                        if (!isPlay) {
+                            play.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    play.setVisibility(View.GONE);
+                                    mP.start();
+                                    isPlay = true;
+                                    pause.setVisibility(View.VISIBLE);
+                                }
+                            });
+                        }
+                        else {
+                            pause.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    pause.setVisibility(View.GONE);
+                                    mP.pause();
+                                    isPlay = false;
+                                    play.setVisibility(View.VISIBLE);
+                                }
+                            });
+                        }
                         Toast.makeText(TamrTabAndFragment1Page.this,"صفحه اول",Toast.LENGTH_SHORT).show();
                         break;
                     case "Two" :
@@ -56,6 +88,9 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
                         break;
                 }
             }
-        });
+        };
+
+        tbHst.setOnTabChangedListener(tb);
+        tb.onTabChanged("One");
     }
 }
