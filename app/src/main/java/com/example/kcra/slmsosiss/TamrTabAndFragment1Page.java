@@ -36,7 +36,7 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
         tbHst.setup();
 
         TabHost.TabSpec tab1 = tbHst.newTabSpec("One"); // از کلاس تب‌اسپک آبجکت می‌سازیم و تگ می‌دهیم
-        tab1.setContent(R.id.primary); // برای آبکجت ست‌کانتنت می‌کنیم با آی‌دی یکی از سه‌ ریلتیو‌لی‌آوت موجود در فریم لی‌آوت
+        tab1.setContent(R.id.B_band); // برای آبکجت ست‌کانتنت می‌کنیم با آی‌دی یکی از سه‌ ریلتیو‌لی‌آوت موجود در فریم لی‌آوت
         tab1.setIndicator("1'st"); // برای آبجکت ست ایندیکیتور می‌کنیم (روی خود تب نوشته می‌شود)
         tbHst.addTab(tab1); // آبجکت اول را (از تب‌اسپک ساختیم) اضافه می‌کنیم به آبجکتی که از تب‌هاست ساخته بودیم
 
@@ -56,7 +56,6 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
             public void onTabChanged(String s) { // برای آبکجتی که از تب‌هاست ساخته بودیم تب‌چنجد‌لیستنر ست می‌کنیم
                 switch (s) { //  با سویچ و به ازای تگ‌هایی که به هر تب نسبت دادیم می‌تونیم کد‌های نه خیلی مفصل بنویسیم
                     case "One" :
-
                         play.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -74,7 +73,6 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
                                 }
                             }
                         });
-
                         pause.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -92,12 +90,13 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
                                 }
                             }
                         });
-
                         Toast.makeText(TamrTabAndFragment1Page.this,"صفحه اول",Toast.LENGTH_SHORT).show();
                         break;
+
                     case "Two" :
                         Toast.makeText(TamrTabAndFragment1Page.this,"صفحه دوم",Toast.LENGTH_SHORT).show();
                         break;
+
                     case "Three" :
                         Toast.makeText(TamrTabAndFragment1Page.this,"صفحه سوم",Toast.LENGTH_SHORT).show();
                         break;
