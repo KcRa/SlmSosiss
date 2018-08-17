@@ -57,51 +57,42 @@ public class TamrTabAndFragment1Page extends AppCompatActivity {
                 switch (s) { //  با سویچ و به ازای تگ‌هایی که به هر تب نسبت دادیم می‌تونیم کد‌های نه خیلی مفصل بنویسیم
                     case "One" :
 
-//                        play.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View view) {
-//                                if (!isPlay) {
-//                                    play.setVisibility(View.GONE);
-//                                    mP.start();
-//                                    isPlay = true;
-//                                    pause.setVisibility(View.VISIBLE);
-//                                }
-//                                else {
-//                                    pause.setOnClickListener(new View.OnClickListener() {
-//                                        @Override
-//                                        public void onClick(View view) {
-//                                              pause.setVisibility(View.GONE);
-//                                              mP.pause();
-//                                              isPlay = false;
-//                                              play.setVisibility(View.VISIBLE);
-//                                        }
-//                                    });
-//                                }
-//                            }
-//                        });
-
-                        if (!isPlay) {
-                            play.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
+                        play.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                if (!isPlay) {
                                     play.setVisibility(View.GONE);
                                     mP.start();
                                     isPlay = true;
                                     pause.setVisibility(View.VISIBLE);
                                 }
-                            });
-                        }
-                        else {
-                            pause.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
+                                else {
                                     pause.setVisibility(View.GONE);
                                     mP.pause();
                                     isPlay = false;
                                     play.setVisibility(View.VISIBLE);
                                 }
-                            });
-                        }
+                            }
+                        });
+
+                        pause.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                if (isPlay) {
+                                    pause.setVisibility(View.GONE);
+                                    mP.pause();
+                                    isPlay = false;
+                                    play.setVisibility(View.VISIBLE);
+                                }
+                                else {
+                                    play.setVisibility(View.GONE);
+                                    mP.start();
+                                    isPlay = true;
+                                    pause.setVisibility(View.VISIBLE);
+                                }
+                            }
+                        });
+
                         Toast.makeText(TamrTabAndFragment1Page.this,"صفحه اول",Toast.LENGTH_SHORT).show();
                         break;
                     case "Two" :
